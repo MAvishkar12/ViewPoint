@@ -48,7 +48,7 @@ function App() {
       handleDeleteWatchList={handleDeleteWatchList}
       watchList={watchList}
       />}   ></Route>
-      <Route path="watchlist" element={<WatchList/>}   ></Route>
+      <Route path="watchlist" element={<WatchList watchList={watchList} />}   ></Route>
     </Routes>
    
     </>

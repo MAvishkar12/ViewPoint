@@ -1,6 +1,6 @@
 
 
-function WatchList() {
+function WatchList({watchList}) {
   return (
 
     <>
@@ -25,32 +25,23 @@ function WatchList() {
       
         </thead>
         <tbody className="border-2 border-red-400  bg-gray-200 justify-center">
-          <tr className="">
+          {watchList.map((movie)=>{
+            return    <tr key={movie.id} className="">
             <td className="flex  items-center py-2 px-2 ">
-              <img className="h-[6rem] w-[10rem]"  src="https://images.ottplay.com/images/marco-official-poster-1735321194.jpg?impolicy=ottplay-202410&width=1200&height=675"></img>
-              <h5 className="px-8">Marco</h5>
+              <img className="h-[6rem] w-[10rem]"  src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} />
+              <h5 className="px-8">{movie.title}</h5>
             </td>
         
-            <td>7.5</td>
-            <td>704K</td>
+            <td>{movie.vote_average}</td>
+            <td>{movie.popularity}</td>
             <td>Action</td>
             <td className="text-red-800  cursor-pointer">Delete</td>
           </tr>
+          })}
+         
         </tbody>
 
-        <tbody className="bg-gray-200 justify-center">
-          <tr className="">
-            <td className="flex  items-center py-2 px-2 ">
-              <img className="h-[6rem] w-[10rem]"  src="https://images.ottplay.com/images/marco-official-poster-1735321194.jpg?impolicy=ottplay-202410&width=1200&height=675"></img>
-              <h5 className="px-8">Marco</h5>
-            </td>
         
-            <td>7.5</td>
-            <td>704K</td>
-            <td>Action</td>
-            <td className="text-red-800  cursor-pointer">Delete</td>
-          </tr>
-        </tbody>
       </table>
     </div>
     </>

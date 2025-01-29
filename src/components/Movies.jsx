@@ -16,7 +16,8 @@ function Movies({ handleAddWatchList, handleDeleteWatchList, watchList }) {
       .then((respond) => {
         let moviedata = respond.data.results;
         setMovies(moviedata);
-     
+       console.log(movies);
+       
 
      
       });

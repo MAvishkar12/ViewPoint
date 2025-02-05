@@ -1,7 +1,7 @@
 
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { Link } from "react-router";
-import { IoMdHome } from "react-icons/io";
+
 import { MdOutlineHome } from "react-icons/md";
 import { FaRegBookmark } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
